@@ -79,11 +79,14 @@ hr{
     height: 515px;
     background-color: rgba(0,0,0,0.8);
 }
+main{
+    margin-top: -345px;
+}
 .userCard {
-    border: 1PX solid #DC6465;
     max-width: 970PX;
     background-color: #fff;
     margin: 0 auto;
+    box-shadow: 2px 3px 8px -2px rgba(0, 0, 0, 0.75);
 }
 .userCard .pictureAndText{
     padding: 50px;
