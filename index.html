@@ -7,47 +7,64 @@
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+    <script src="//at.alicdn.com/t/font_801140_exj58l2xmj.js"></script>
     <script src="main.js"></script>
+    <style type="text/css">
+        .icon {
+           width: 1em; height: 1em;
+           vertical-align: -0.15em;
+           fill: currentColor;
+           overflow: hidden;
+        }
+    </style>
 </head>
 
-<body>   
-    <div class="topNavBar clearfix">
-        <a class="logo" href="index.html">
-            <span class="rs">RS</span><span class="card">card</span>
-        </a>
-        <nav>
-            <ul class="clearfix">
-                <li>
-                    <a href="#">关于</a>
-                </li>
-                <li>
-                    <a href="#">技能</a>
-                </li>
-                <li>
-                    <a href="#">经验</a>
-                </li>
-                <li>
-                    <a href="#">作品</a>
-                </li>
-                <li>
-                    <a href="#">博客</a>
-                </li>
-                <li>
-                    <a href="#">联系</a>
-                </li>
-            </ul>
-        </nav>
+<body>  
+
+    <div class="topNavBar">
+        <div class="topNavBar-inner clearfix">
+            <a class="logo" href="index.html">
+                <span class="rs">RS</span>
+                <span class="card">card</span>
+            </a>
+            <nav>
+                <ul class="clearfix">
+                    <li>
+                        <a href="#">关于</a>
+                    </li>
+                    <li>
+                        <a href="#">技能</a>
+                    </li>
+                    <li>
+                        <a href="#">经验</a>
+                    </li>
+                    <li>
+                        <a href="#">作品</a>
+                    </li>
+                    <li>
+                        <a href="#">博客</a>
+                    </li>
+                    <li>
+                        <a href="#">联系</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </div>
-    <div class="banner" style="background-image: url(#)"></div>
+    <div class="banner">
+        <div class="mask"></div>
+    </div>
     <main>
-        <div class="card">
-            <div class="pictureAndText">
+        <div class="userCard">
+            <div class="pictureAndText clearfix">
                 <div class="picture">
-                    <img src="#" alt="头像">
+                    <img src="./images/avatar.jpg" width="299" height="347" alt="头像">
                 </div>
                 <div class="text">
                     <div class="profile">
-                        <span class="welcome">Hello</span>
+                        <span class="welcome">Hello
+                            <span class="triangle"></span>
+                        </span>
                         <h1>我是白小葱</h1>
                         <hr>
                         <dl>
@@ -65,17 +82,21 @@
             </div>           
             <footer class="media">
                 <a href="">
-                    <img src="#" alt=""> </a>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-github1"></use>
+                    </svg>
+                </a>
                 <a href="">
-                    <img src="#" alt=""> </a>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weibo"></use>
+                    </svg>
+                </a>
                 <a href="">
-                    <img src="#" alt=""> </a>
-                <a href="">
-                    <img src="#" alt=""> </a>
-                <a href="">
-                    <img src="#" alt=""> </a>
-                <a href="">
-                    <img src="#" alt=""> </a>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-twitter"></use>
+                    </svg>
+                </a>
+                
             </footer>
         </div>
         <a class="button" href="#">下载简历</a>
