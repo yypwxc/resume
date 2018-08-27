@@ -65,11 +65,16 @@
                         <span class="welcome">Hello
                             <span class="triangle"></span>
                         </span>
-                        <h1>我是白小葱</h1>
+                        <h1>白小葱</h1>
+                        <p>前端开发工程师，熟悉HTML5 / CSS3 /的JavaScript / Vue公司。
+
+                            </p>
                         <hr>
                         <dl>
                             <dt>年龄</dt>
                             <dd>25</dd>
+                            <dt>性别</dt>
+                            <dd>女</dd>
                             <dt>城市</dt>
                             <dd>杭州</dd>
                             <dt>邮箱</dt>
@@ -98,13 +103,87 @@
                 </a>
                 
             </footer>
+   
         </div>
-        <a class="button" href="#">下载简历</a>
-        <p>
-             白小葱， 前端学习中。<br>
-             技能：前端开发，Rails 开发，Node.js 开发
+        <p class="downloadResume">
+            <a class="button" href="./resume.pdf" target="_blank" download>下载PDF简历</a>
+        </p>
+        
+        <p class="SelfIntroduction">
+                白小葱， 前端学习中。技能：前端开发，Rails 开发，Node.js 开发
+                具有动态Web项目开发周期的所有阶段的经验。
+                精通许多编程语言，包括JavaScript，SQL和C.在项目管理和客户关系方面的背景。 <br>
+             
         </p>
     </main>
+    <section class="skills">
+        <h2>技能</h2>
+        <nav>
+            <ol class="clearfix">
+                <li>
+                    <h3>HTML</h3>
+                    <div class="progressBar">
+                        <div class="progress"></div>
+                    </div>
+                </li>
+                <li>
+                        <h3>CSS</h3>
+                        <div class="progressBar">
+                            <div class="progress"></div>
+                        </div>
+                    </li>
+                    <li>
+                            <h3>jQuery</h3>
+                            <div class="progressBar">
+                                <div class="progress"></div>
+                            </div>
+                        </li>
+                        <li>
+                                <h3>Vue </h3>
+                                <div class="progressBar">
+                                    <div class="progress"></div>
+                                </div>
+                            </li>
+               
+            </ol>
+        </nav>
+    </section>
+    <section class="portfolio">
+        <h2>作品集</h2>
+        <nav>
+            <ol class="clearfix">
+                <li id="portfolioAll">所有</li>
+                <li id="portfolioFramework">框架</li>
+                <li id="portfolioVallina">原生JS</li>
+            </ol>
+            <div id="portfolioBar" class="bar">
+                <div class="bar-inner"></div>
+            </div>
+        </nav>
+        <script>
+            portfolioAll.onclick= function(){
+                portfolioBar.className='bar state1'
+            }
+            portfolioFramework.onclick= function(){
+                portfolioBar.className='bar state2'
+            }
+            portfolioVallina.onclick= function(){
+                portfolioBar.className='bar state3'
+            }
+        </script>
+        <div class="works">
+            <div class="big" style="left: 0;top: 0">
+                <img src="./images/work1.jpg" alt="">
+            </div>
+            <div class="small" style="top: 0;left: 644px;">
+                <img src="./images/work2.jpg" alt="">
+            </div>
+            <div class="small" style="top: 298px;left: 644px;">
+                    <img src="./images/work3.jpg" alt="">
+                </div>
+        </div>
+    </section>
+    
 </body>
 
 </html>
