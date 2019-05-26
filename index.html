@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <script src="//at.alicdn.com/t/font_801140_exj58l2xmj.js"></script>
-    <script src="main.js"></script>
     <style type="text/css">
         .icon {
            width: 1em; height: 1em;
@@ -21,28 +20,38 @@
 
 <body>  
 
-    <div class="topNavBar">
+    <div id="topNavBar" class="topNavBar">
         <div class="topNavBar-inner clearfix">
             <a class="logo" href="index.html">
                 <span class="rs">RS</span>
                 <span class="card">card</span>
             </a>
-            <nav>
+            <nav class="menu">
                 <ul class="clearfix">
                     <li>
-                        <a href="#">关于</a>
+                        <a  href="#siteAbout">关于</a>
                     </li>
                     <li>
-                        <a href="#">技能</a>
+                        <a href="#siteSkills">技能</a>
+                        <ul class="subMenu">
+                            <li>技能1</li>
+                            <li>技能1</li>
+                            <li>技能1</li>
+                        </ul>
                     </li>
                     <li>
-                        <a href="#">经验</a>
+                        <a  href="#">经验</a>
                     </li>
                     <li>
-                        <a href="#">作品</a>
+                        <a href="#siteWorks">作品</a>
                     </li>
                     <li>
                         <a href="#">博客</a>
+                        <ul class="subMenu">
+                            <li>技能1</li>
+                            <li>技能1</li>
+                            <li>技能1</li>
+                        </ul>
                     </li>
                     <li>
                         <a href="#">联系</a>
@@ -55,7 +64,7 @@
         <div class="mask"></div>
     </div>
     <main>
-        <div class="userCard">
+        <div id="siteAbout" class="userCard">
             <div class="pictureAndText clearfix">
                 <div class="picture">
                     <img src="./images/avatar.jpg" width="299" height="347" alt="头像">
@@ -116,7 +125,7 @@
              
         </p>
     </main>
-    <section class="skills">
+    <section id="siteSkills" class="skills">
         <h2>技能</h2>
         <nav>
             <ol class="clearfix">
@@ -148,7 +157,7 @@
             </ol>
         </nav>
     </section>
-    <section class="portfolio">
+    <section class="portfolio" id="siteWorks">
         <h2>作品集</h2>
         <nav>
             <ol class="clearfix">
@@ -169,6 +178,45 @@
             }
             portfolioVallina.onclick= function(){
                 portfolioBar.className='bar state3'
+            }
+
+            window.onscroll = function(){
+                if(window.scrollY>0) {
+                    topNavBar.classList.add('sticky')
+                } else{
+                    topNavBar.classList.remove('sticky')
+                }
+                
+                
+            }
+            let liTags =  document.querySelectorAll('nav.menu > ul > li')
+           
+            for(let i= 0; i<liTags.length; i++){
+                liTags[i].onmouseenter = function(x) {
+                    // let li = x.currentTarget
+                    x.currentTarget.classList.add('active')
+                    // let brother = li.getElementsByTagName('UL')[0]
+                    // brother.classList.add('active')
+                }
+                liTags[i].onmouseleave = function(x) {
+                    // let li = 
+                    x.currentTarget.classList.remove('active')
+                    // let brother = li.getElementsByTagName('UL')[0]
+                    // brother.classList.remove('active')
+                }
+                
+            }
+
+            let aTags =  document.querySelectorAll('nav.menu > ul > li >a')
+            for(let i=0;i<aTags.length; i++ ) {
+                aTags[i].onclick = function (x) {
+                    x.preventDefault()
+                    let a = x.currentTarget
+                    let href = a.getAttribute('href')
+                    let element = document.querySelector(href)
+                    let top = element.offsetTop
+                    window.scrollTo(0, top-88)
+                }
             }
         </script>
         <div class="works">
