@@ -31,6 +31,24 @@ hr{
     clear: both;
   }
 
+[data-x].active{
+    outline: 10px solid red;
+  }
+[data-x].offset{
+    transform: translateY(100px);
+  }
+[data-x]{
+    transform: translateY(0);
+    transition: all 0.5s;
+  }
+@keyframes slideUp{
+    0%{
+      transform: translateY(-30px);
+    }
+    100%{
+      transform: translateY(0);
+    }
+}
 .topNavBar{
     position: fixed;
     width: 100%;
@@ -85,7 +103,8 @@ hr{
     border-bottom: 3px solid transparent;
     padding: 5px 0;
 }
-.topNavBar nav>ul>li.active>a::after{
+.topNavBar nav>ul>li.active>a::after,
+.topNavBar nav > ul > li.highlight > a::after{
     content: "";
     display: block;
     width: 100%;
